@@ -28,7 +28,41 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div>
+      <video id="video1" width="400" controls>
+        <source src="Big_Buck_Bunny_1080_10s_10MB.mp4" type="video/mp4" />
+
+        <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
+        Your browser does not support HTML video.
+      </video>
+    </div>
+    <script>
+      const vid = document.getElementById("video1");
+      // TODO: or issue:
+      // 1. is this referring one by one frame? how to know fps ?
+      // 2. how to know total seconds of video?
+      vid.addEventListener("seeking", myFunction);
+
+      function myFunction() {
+        // Display the current position of the <video> in a p element with id="demo"
+        // document.getElementById("demo").innerHTML = vid.currentTime;
+        console.log("vid.currentTime:", vid.currentTime);
+      }
+
+      vid.onloadedmetadata = function () {
+        console.log("metadata loaded!");
+        console.log("duration:", vid.duration); // duration: 78.464
+
+        vid.currentTime = 5; //works !!!
+
+        // seek event (show current frame)
+        // https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_av_event_seeking_currenttime
+      };
+    </script>
+
     <div id="root"></div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
