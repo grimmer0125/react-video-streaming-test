@@ -19,6 +19,7 @@ function App() {
     "https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8",
     "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
     "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    "http://localhost:8001/stream/index.m3u8",
     // 1. 1.ts
     // 2.
   ];
@@ -43,13 +44,24 @@ function App() {
       {/* Local file:
       <ReactPlayer playing url={url} />
       HLS: (https://jsfiddle.net/99ee3atp/2/) */}
+      ReactPlayer
       <ReactPlayer
-        url={hlsURL[2]}
+        url={hlsURL[3]}
         playing
+        controls={true}
         width="100%"
         height="100%"
         className="player"
       />
+      ReactPlayer bottom{/* <div className="overlay"> */}
+      {/* This will overlay the player */}
+      {/* <canvas
+        id="myCanvas"
+        width="100%"
+        height="100%"
+        className="overlay"
+      ></canvas> */}
+      {/* </div> */}
     </div>
   );
 }

@@ -29,15 +29,44 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div>
+    <!-- works on safari on https://gist.github.com/ufologist/1ec2b820738a95b25cf7d805ed615949-->
+    <!-- <div>
+      <video
+        width="300"
+        height="200"
+        playsinline
+        webkit-playsinline
+        autoplay
+        controls
+        preload="auto"
+        x-webkit-airplay="true"
+        x5-video-player-fullscreen="true"
+        x5-video-player-typ="h5"
+      >
+        <source
+          src="http://localhost:8000/stream/index.m3u8"
+          type="application/x-mpegURL"
+        />
+      </video>
+    </div> -->
+
+    <!-- <div>
+      <video width="300" height="200" autoplay controls preload="auto">
+        <source
+          src="http://localhost:8001/stream/index.m3u8"
+          type="application/x-mpegURL"
+        />
+      </video>
+    </div> -->
+
+    <!-- <div>
       <video id="video1" width="400" controls>
         <source src="Big_Buck_Bunny_1080_10s_10MB.mp4" type="video/mp4" />
 
-        <!-- <source src="mov_bbb.ogg" type="video/ogg"> -->
         Your browser does not support HTML video.
       </video>
-    </div>
-    <script>
+    </div> -->
+    <!-- <script>
       const vid = document.getElementById("video1");
       // TODO: or issue:
       // 1. is this referring one by one frame? how to know fps ?
@@ -59,7 +88,7 @@
         // seek event (show current frame)
         // https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_av_event_seeking_currenttime
       };
-    </script>
+    </script> -->
 
     <div id="root"></div>
 
